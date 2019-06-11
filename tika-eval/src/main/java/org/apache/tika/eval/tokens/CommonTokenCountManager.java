@@ -25,6 +25,7 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -88,6 +89,9 @@ public class CommonTokenCountManager {
     }
 
 
+    public Set<String> getTokens(String lang) {
+        return Collections.unmodifiableSet(new HashSet(commonTokenMap.get(getActualLangCode(lang))));
+    }
     //return langcode for lang that you are actually using
     //lazily load the appropriate model
     private String getActualLangCode(String langCode) {
