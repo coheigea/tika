@@ -93,6 +93,6 @@ public class TrainTestSplit {
         OutputStream os = new GzipCompressorOutputStream(
                 new BufferedOutputStream(
                 Files.newOutputStream(outputDir.resolve(which).resolve(f.getName()+".gz"))));
-        return new BufferedWriter(new OutputStreamWriter(os));
+        return new BufferedWriter(new OutputStreamWriter(os, StandardCharsets.UTF_8));
     }
 }

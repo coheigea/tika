@@ -351,6 +351,7 @@
     <cli.version>1.4</cli.version>
     <lucene.version>8.1.1</lucene.version>
     <mockito.version>2.27.0</mockito.version>
+    <opennlp.version>1.9.1</opennlp.version>
   </properties>
 
   <build>

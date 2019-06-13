@@ -22,6 +22,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Set;
 
 import org.apache.tika.eval.tokens.CommonTokenCountManager;
@@ -60,7 +61,7 @@ public class CommonTokenOverlapCounter {
         denom = setA.size()+setB.size();
         double percent = (double)overlap/(double)denom;
         if (percent > 0.01) {
-            System.out.println(String.format("%s %s %.2f", langA, langB, percent));
+            System.out.println(String.format(Locale.US, "%s %s %.2f", langA, langB, percent));
         }
     }
 

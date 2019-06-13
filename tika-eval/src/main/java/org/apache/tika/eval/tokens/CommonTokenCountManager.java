@@ -59,7 +59,7 @@ public class CommonTokenCountManager {
         Set<String> set = commonTokenMap.get(defaultLangCode);
         if (set == null) {
             LOG.warn("No common tokens for default language: '"+defaultLangCode+"'");
-            commonTokenMap.put(defaultLangCode, new HashSet<String>());
+            commonTokenMap.put(defaultLangCode, Collections.EMPTY_SET);
         }
     }
 
